@@ -62,12 +62,12 @@ public class NflDepthChart
   {
     if (!Enum.TryParse<NflPosition>(position, true, out var nflPosition))
     {
-      return new List<NflPlayer>();
+      return [];
     }
 
     if (!_chart.TryGetValue(nflPosition, out var list))
     {
-      return new List<NflPlayer>();
+      return [];
     }
 
     var playerIndex = list.IndexOf(player);
